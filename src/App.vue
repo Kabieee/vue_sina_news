@@ -1,32 +1,40 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="container">
+      <div id="top-first">{{ this.$store.state.globalTitle }}</div>
+      <router-view></router-view>
     </div>
-    <router-view/>
   </div>
+
+
+  <!--    <div id="nav">-->
+  <!--      <router-link to="/">Home</router-link> |-->
+  <!--      <router-link to="/about">About</router-link>-->
+  <!--    </div>-->
+  <!--    <router-view/>-->
+
+
 </template>
 
-<style>
+<style lang="scss" scoped>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  display: flex;
+  justify-content: center;
+}
+#container {
+  margin-top: 3vh;
+  width: 1200px;
+  #top-first {
+      font-size: 20px;
+  }
+  #top-second {
+    margin-top: 2vh;
+    height: 15vh;
+    width: 30vw;
+    background-color: #f2f2f2;
+    //background: #42b983;
+  }
+
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
