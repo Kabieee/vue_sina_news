@@ -87,6 +87,7 @@ export default {
             name: 'rank',
             type: 'value',
             max: 65,
+            inverse: true
           },
           {
             name: 'hot',
